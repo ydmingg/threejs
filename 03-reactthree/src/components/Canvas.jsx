@@ -57,8 +57,6 @@ function Canvas() {
 }
 
 
-
-
 // 类组件
 // class Canvas extends Component { 
 //     constructor() { 
@@ -120,9 +118,6 @@ function Canvas() {
 //         animate()
 //     }
 // }
-
-
-
 
 
 export default Canvas
