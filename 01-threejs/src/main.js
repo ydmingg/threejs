@@ -1,3 +1,6 @@
 import * as THREE from 'three';
 
-console.log(THREE);
+// 创建场景
+const scene = new THREE.Scene()
+
+console.log(scene);
