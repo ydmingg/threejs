@@ -1,1 +1,1 @@
-# THREEJS 
+# ThreeJS Study
