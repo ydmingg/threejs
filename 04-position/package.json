@@ -1,7 +1,7 @@
 {
   "name": "04-position",
   "private": true,
-  "version": "0.0.01",
+  "version": "0.0.02",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,6 +12,7 @@
     "vite": "^5.3.4"
   },
   "dependencies": {
+    "lil-gui": "^0.19.2",
     "three": "^0.167.0"
   }
 }
