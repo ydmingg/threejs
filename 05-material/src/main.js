@@ -47,7 +47,7 @@ const rgbLoader = new RGBELoader().load(url5, (envTexture) => {
     // 设置平面材质的环境贴图
     planeMaterial.envTexture = envTexture
     
-
+    
 
     
 })
