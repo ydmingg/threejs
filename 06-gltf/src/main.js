@@ -1,10 +1,10 @@
 import * as THREE from 'three'
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 //引入加载器
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 // 导入draoc解压缩解析器
-import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 
 const scene = new THREE.Scene()
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -37,7 +37,7 @@ gltfLoader.load(glb, (model) => {
 })
 
 
-const glb2 = "../static/models/BoxVertexColors.glb"
+const glb2 = "../static/models/House_001_GLB.glb"
 // 加载draoc压缩过的模型
 const dracoLoader = new DRACOLoader() // 实例化draoc解压缩器
 dracoLoader.setDecoderPath('../static/draco/')
