@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 // 导入lil.gui 属性参数管理工具
 import GUI from 'lil-gui'
 
