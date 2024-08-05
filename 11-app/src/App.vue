@@ -13,6 +13,8 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 // 解压器
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
+// 环境纹理(hdr)加载器
+import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 
 // 初始化场景
 const scene = new THREE.Scene()
@@ -37,6 +39,10 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 // 将渲染器添加到页面
 document.body.appendChild(renderer.domElement)
 
+//设置色调映射与亮度
+renderer.toneMapping = THREE.ACESFilmicToneMapping
+renderer.toneMappingExposure = 0.5
+
 // 初始化控制器
 const controls = new OrbitControls(camera, renderer.domElement)
 // 设置阻尼
@@ -48,6 +54,21 @@ dracoLoader.setDecoderPath('../static/draco/')
 // 初始化加载模型
 const gltfLoader = new GLTFLoader()
 gltfLoader.setDRACOLoader(dracoLoader) 
+
+
+// 加载环境纹理
+const rgbeLoader = new RGBELoader()
+rgbeLoader.load('../static/texture/metro_noord_1k.hdr', (texture) => { 
+    //设置球形环境纹理
+    texture.mapping = THREE.EquirectangularReflectionMapping
+
+    scene.background = texture
+    // 设置物体贴图
+    scene.environment = texture
+
+})
+
+
 
 // 开始加载模型
 gltfLoader.load('../static/models/AlphaBlendModeTest.glb', (gltf) => { 
