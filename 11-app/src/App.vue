@@ -83,7 +83,7 @@ controls.target.set(-8,2,0)
 
 // 初始化解压模型
 const dracoLoader = new DRACOLoader()
-dracoLoader.setDecoderPath('../static/draco/')
+dracoLoader.setDecoderPath('../../11-app/static/draco/')
 // 初始化加载模型
 const gltfLoader = new GLTFLoader()
 gltfLoader.setDRACOLoader(dracoLoader) 
@@ -91,7 +91,7 @@ gltfLoader.setDRACOLoader(dracoLoader)
 
 // 加载环境纹理
 const rgbeLoader = new RGBELoader()
-rgbeLoader.load('../static/texture/metro_noord_1k.hdr', (texture) => { 
+rgbeLoader.load('../../11-app/static/texture/metro_noord_1k.hdr', (texture) => { 
     //设置球形环境纹理
     texture.mapping = THREE.EquirectangularReflectionMapping
 
@@ -104,7 +104,7 @@ rgbeLoader.load('../static/texture/metro_noord_1k.hdr', (texture) => {
 
 
 // 开始加载模型
-gltfLoader.load('../static/models/pistol.glb', (gltf) => { 
+gltfLoader.load('../../11-app/static/models/pistol.glb', (gltf) => { 
     const module = gltf.scene
     module.traverse(child => {
         //遍历场景中的所有的元素
