@@ -20,7 +20,7 @@ style="
         color: white;
     "
     >
-        <h1>{{item.text}}</h1>
+        <h1 style="padding: 40px;">{{item.text}}</h1>
     </div>
 </div>
   
@@ -241,7 +241,7 @@ const translateCamera = (position,target) => {
 // 设置对象用来存储数组
 const scenes = [
     {
-        text: "我是文字1",
+        text: "首页",
         callback: () => { 
             //执行函数切换的位置
             translateCamera(
@@ -251,7 +251,7 @@ const scenes = [
         }
     },
     {
-        text: "我是文字2",
+        text: "介绍页001",
         callback: () => { 
             //执行函数切换的位置
             translateCamera(
@@ -261,7 +261,7 @@ const scenes = [
         }
     },
     {
-        text: "我是文字3",
+        text: "介绍页002",
         callback: () => { 
             //执行函数切换的位置
             translateCamera(
@@ -271,7 +271,7 @@ const scenes = [
         }
     },
     {
-        text: "我是文字4",
+        text: "结尾",
         callback: () => { 
             //执行函数切换的位置
             translateCamera(
